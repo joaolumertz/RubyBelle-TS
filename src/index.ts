@@ -1,12 +1,8 @@
 import { ExtendedClient } from "./structs/ExtendedClient";
 export * from "colors";
+import config from './config.json';
 
 const client = new ExtendedClient();
-
 client.start();
 
-export { client }
-
-client.once("ready", () => {
-    console.log('Bot Online'.green)
-})
+export { client, config }
